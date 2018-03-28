@@ -4,6 +4,9 @@ import main from '@/components/main'
 import login from '@/components/login'
 import departmentTable from '@/components/departmentTable'
 import positionTable from '@/components/positionTable'
+import absenceTable from '@/components/absenceTable'
+import extraWorkTable from '@/components/extraWorkTable'
+
 
 Vue.use(Router)
 
@@ -23,6 +26,14 @@ export default new Router({
         {
           path: 'showPosition',
           component: positionTable
+        },
+        {
+          path: 'showExtraWork',
+          component: extraWorkTable
+        },
+        {
+          path: 'showAbsence',
+          component: absenceTable
         }
       ]
     },

@@ -10,11 +10,11 @@
           <i class="el-icon-document"></i>
           <span slot="title">工种</span>
         </el-menu-item>
-        <el-menu-item index="3" @click="addShowPosition">
+        <el-menu-item index="3" @click="addShowAbsence">
           <i class="el-icon-star-on"></i>
           <span slot="title">缺勤记录</span>
         </el-menu-item>
-        <el-menu-item index="4" @click="addShowPosition">
+        <el-menu-item index="4" @click="addShowExtraWork">
           <i class="el-icon-star-off"></i>
           <span slot="title">加班记录</span>
         </el-menu-item>
@@ -77,6 +77,13 @@ export default {
     addShowPosition: function() {
       console.log('添加position')
       this.$router.push('/main/showPosition')
+    },
+    addShowAbsence: function() {
+      console.log('添加缺勤组件')
+    },
+    addShowExtraWork: function() {
+      console.log('添加加班组件')
+      this.$router.push('/main/showExtraWork')
     }
   },
   created: async function() {
