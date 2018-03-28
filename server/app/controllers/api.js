@@ -122,7 +122,7 @@ export async function getPositionEmployees(ctx) {
  * @result {json}
  * 查找该员工的加班信息
  */
-export async function getExtraWorks(ctx) {
+export async function getEmpExtraWorks(ctx) {
   try {
     let employeeId = ctx.request.body.employeeId
     let Employee = db.Employee
@@ -140,13 +140,30 @@ export async function getExtraWorks(ctx) {
   }
 }
 
+/***
+ * @result {json}
+ * 获取全部加班信息
+ */
+export async function getExtraWorks(ctx) {
+  try {
+    let ExtraWork = db.ExtraWork
+    let extraWorks = await ExtraWork.findAll()
+    ctx.response.body = {
+      extraWorks: extraWorks
+    }
+  } catch (err) {
+    console.log(err)
+    ctx.response.body = {}
+    ctx.throw(404)
+  }
+}
 
 /***
  * @param {employeeId:uuid}
  * @result [json]
  * 查找该员工的出勤信息
  */
-export async function getAbsences(ctx) {
+export async function getEmpAbsences(ctx) {
   try {
     let employeeId = ctx.request.body.employeeId
     let Employee = db.Employee
@@ -160,6 +177,23 @@ export async function getAbsences(ctx) {
     }
   } catch (err) {
     ctx.response.body = {}
+  }
+}
+
+/***
+ * @result {json}
+ * 获取全部缺勤信息
+ */
+export async function getAbsences(ctx) {
+  try {
+    let Absence = db.Absence
+    let absences = await Absence.findAll()
+    ctx.response.body = {
+      absences: absences
+    }
+  } catch (err) {
+    ctx.response.body = {}
+    ctx.throw(404)
   }
 }
 
@@ -306,7 +340,7 @@ export async function deleOrModInfo(ctx) {
 async function deleInfo(ctx, model, id) {
   try {
     let Model = db[model]
-    if (model === "Extrawork" || model === "Absence") {
+    if (model === "ExtraWork" || model === "Absence") {
       // extrawork和absence可以直接删除
       let record = await Model.findOne({
         where: {
@@ -393,6 +427,7 @@ export async function addInfo(ctx) {
   try {
     let model = ctx.request.body.model
     let data = ctx.request.body.data
+    console.log(data)
     let Model = db[model] // 这里默认一定是正确的model
     await Model.create(data) // 这里默认传递进去的数据一定符合要求
     ctx.response.body = {

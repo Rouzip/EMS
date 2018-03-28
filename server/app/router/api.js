@@ -5,9 +5,11 @@ import {
   getDepartmentEmployees,
   getPositions,
   getPositionEmployees,
+  getEmpExtraWorks,
+  getEmpAbsences,
+  getSalary,
   getExtraWorks,
   getAbsences,
-  getSalary,
   getMonthlySalary,
   deleOrModInfo,
   addInfo
@@ -20,8 +22,10 @@ router.get('/department', getDepartments)
 router.post('/department/employees', getDepartmentEmployees)
 router.get('/position', getPositions)
 router.post('/position/employees', getPositionEmployees)
-router.post('/extrawork', getExtraWorks)
-router.post('/absence', getAbsences)
+router.post('/extrawork', getEmpExtraWorks)
+router.get('/allextraworks', getExtraWorks)
+router.post('/absence', getEmpAbsences)
+router.get('/absences', getAbsences)
 router.post('/salary/year', getSalary)
 router.post('/salary/month', getMonthlySalary)
 router.post('/infs', deleOrModInfo)
