@@ -57,7 +57,7 @@ function guid() {
 }
 
 export default {
-  name: 'departmentTable',
+  name: 'extraWorkTable',
   data() {
     return {
       addDate: '',
@@ -65,9 +65,6 @@ export default {
       addSalary: '',
       addReason: '',
       addEmployeeId: [],
-      editAble: [],
-      newName: '',
-      newSalary: '',
       pickerOptions: { // 时间选择器
         disabledDate(time) {
           return time.getTime() > Date.now();
