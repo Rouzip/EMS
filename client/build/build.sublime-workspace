@@ -1,0 +1,923 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"comp",
+				"component"
+			],
+			[
+				"com",
+				"components"
+			],
+			[
+				"phto",
+				"photo1"
+			],
+			[
+				"child",
+				"child-com"
+			],
+			[
+				"as",
+				"async\tkeyword"
+			],
+			[
+				"conso",
+				"console_log"
+			],
+			[
+				"X",
+				"X_norm\tstatement"
+			],
+			[
+				"li",
+				"linalg\tmodule"
+			],
+			[
+				"fle",
+				"filename\tparam"
+			],
+			[
+				"img",
+				"img_recover\tstatement"
+			],
+			[
+				"im",
+				"imshow\tfunction"
+			],
+			[
+				"find",
+				"find_closest_centroids\tfunction"
+			],
+			[
+				"ran",
+				"Kmeans_randinitial_centroids"
+			],
+			[
+				"max",
+				"max_iter\tstatement"
+			],
+			[
+				"plot",
+				"plot_data_points\tfunction"
+			],
+			[
+				"colr",
+				"colors_map\tstatement"
+			],
+			[
+				"cv",
+				"cvtColor\tfunction"
+			],
+			[
+				"lines",
+				"linspace\tfunction"
+			],
+			[
+				"hs",
+				"hsv_to_rgb\tfunction"
+			],
+			[
+				"co",
+				"colors"
+			],
+			[
+				"i",
+				"import\tkeyword"
+			],
+			[
+				"c",
+				"class\tNew Class"
+			],
+			[
+				"voa",
+				"visualize_boundary\tfunction"
+			],
+			[
+				"sv",
+				"svm_train\tfunction"
+			],
+			[
+				"par",
+				"dataset3Params"
+			],
+			[
+				"ga",
+				"gamma\tstatement"
+			],
+			[
+				"cl",
+				"class_"
+			],
+			[
+				"vor",
+				"visualize_boundary\tfunction"
+			],
+			[
+				"load",
+				"loadmat\tfunction"
+			],
+			[
+				"PL",
+				"plot_data\tfunction"
+			],
+			[
+				"laod",
+				"load_data\tfunction"
+			],
+			[
+				"gau",
+				"gaussian_kernel\tfunction"
+			],
+			[
+				"sc",
+				"scatter\tfunction"
+			],
+			[
+				"visu",
+				"visualize_boundary_linear\tfunction"
+			],
+			[
+				"svm",
+				"svm_train\tfunction"
+			],
+			[
+				"ker",
+				"kernel_function\tparam"
+			],
+			[
+				"K",
+				"K_x\tstatement"
+			],
+			[
+				"kern",
+				"kernel_matrix\tfunction"
+			],
+			[
+				"cli",
+				"client_sizes\tparam"
+			],
+			[
+				"lao",
+				"loadmat"
+			],
+			[
+				"pred",
+				"predict_y\tstatement"
+			],
+			[
+				"pre",
+				"predict_y\tstatement"
+			],
+			[
+				"Th",
+				"Theta2\tstatement"
+			],
+			[
+				"teh",
+				"Theta1_result\tstatement"
+			],
+			[
+				"inp",
+				"input\tfunction"
+			],
+			[
+				"init",
+				"initial_nn_params\tstatement"
+			],
+			[
+				"theta",
+				"Theta2_grad"
+			],
+			[
+				"the",
+				"Theta1_grad"
+			],
+			[
+				"op",
+				"options\tparam"
+			],
+			[
+				"numbe",
+				"num_labels"
+			],
+			[
+				"numb",
+				"compute_numberical_gradient"
+			],
+			[
+				"Thet",
+				"Theta1"
+			],
+			[
+				"num",
+				"num_labels\tstatement"
+			],
+			[
+				"inpu",
+				"input_layer_size\tstatement"
+			],
+			[
+				"min",
+				"minimize\tmodule"
+			],
+			[
+				"The",
+				"Theta2_grad\tstatement"
+			],
+			[
+				"Theta",
+				"Theta1_grad\tstatement"
+			],
+			[
+				"Tht",
+				"Theta1_grad\tstatement"
+			],
+			[
+				"Del",
+				"Delta2\tstatement"
+			],
+			[
+				"gra",
+				"grad\tstatement"
+			],
+			[
+				"sig",
+				"sigmoid_gradient\tfunction"
+			],
+			[
+				"de",
+				"Delta2\tstatement"
+			],
+			[
+				"z",
+				"z2\tstatement"
+			],
+			[
+				"in",
+				"input\tfunction"
+			],
+			[
+				"od",
+				"order\tparam"
+			],
+			[
+				"cost",
+				"cost_func\tfunction"
+			],
+			[
+				"tue",
+				"True\tkeyword"
+			],
+			[
+				"lamdba",
+				"lambda_\tstatement"
+			],
+			[
+				"grad",
+				"grad_value\tparam"
+			],
+			[
+				"theta1",
+				"Theta1_grad\tstatement"
+			],
+			[
+				"De",
+				"Delta2\tstatement"
+			],
+			[
+				"det",
+				"Delta1\tstatement"
+			],
+			[
+				"del",
+				"delta3\tstatement"
+			],
+			[
+				"T",
+				"Theta1\tstatement"
+			],
+			[
+				"dle",
+				"delta3"
+			],
+			[
+				"all",
+				"all_theta"
+			],
+			[
+				"save",
+				"savetxt\tfunction"
+			],
+			[
+				"one",
+				"one_vs_all\tfunction"
+			],
+			[
+				"lam",
+				"lambda_"
+			],
+			[
+				"ma",
+				"maxiter\tparam"
+			],
+			[
+				"fmin",
+				"fmin_bfgs\tfunction"
+			],
+			[
+				"n",
+				"num_labels\tparam"
+			],
+			[
+				"la",
+				"lambda_"
+			],
+			[
+				"lambda",
+				"lambda_\tparam"
+			],
+			[
+				"gr",
+				"grad\tstatement"
+			],
+			[
+				"re",
+				"regularized"
+			],
+			[
+				"ord",
+				"order"
+			],
+			[
+				"y",
+				"y_t\tstatement"
+			],
+			[
+				"x",
+				"X_t\tstatement"
+			],
+			[
+				"tu",
+				"True\tkeyword"
+			],
+			[
+				"int",
+				"int32\tmodule"
+			],
+			[
+				"exam",
+				"example_width\tstatement"
+			],
+			[
+				"dis",
+				"display_cols\tstatement"
+			],
+			[
+				"ex",
+				"example_width\tstatement"
+			],
+			[
+				"set",
+				"set_cmap\tfunction"
+			],
+			[
+				"forma",
+				"FormatStrFormatter\tclass"
+			],
+			[
+				"for",
+				"FormatStrFormatter\tclass"
+			],
+			[
+				"from",
+				"FormatStrFormatter\tclass"
+			],
+			[
+				"line",
+				"LinearLocator\tclass"
+			],
+			[
+				"mpl",
+				"mpl_toolkits"
+			],
+			[
+				"th",
+				"theta\tparam"
+			],
+			[
+				"No",
+				"None\tkeyword"
+			],
+			[
+				"j",
+				"J_all\tstatement"
+			],
+			[
+				"lin",
+				"linspace\tfunction"
+			],
+			[
+				"cpm",
+				"compute_cost\tfunction"
+			],
+			[
+				"lie",
+				"LinearRegression\tclass"
+			],
+			[
+				"xl",
+				"Xlabel\tparam"
+			],
+			[
+				"if",
+				"ifmain\tif __name__ == '__main__'"
+			],
+			[
+				"col",
+				"column1\tstatement"
+			],
+			[
+				"colu",
+				"column2\tstatement"
+			],
+			[
+				"file",
+				"filename\tparam"
+			],
+			[
+				"rad",
+				"readlines\tfunction"
+			],
+			[
+				"le",
+				"linear_model\tmodule"
+			],
+			[
+				"impo",
+				"import"
+			],
+			[
+				"py",
+				"pyplot\tmodule"
+			],
+			[
+				"oni",
+				"oninput\t: EventHandler Document"
+			],
+			[
+				"rang",
+				"range1"
+			],
+			[
+				"range",
+				"range1"
+			],
+			[
+				"doc",
+				"document\t: Document Window"
+			],
+			[
+				"cir",
+				"circleValue"
+			],
+			[
+				"circ",
+				"circleContext"
+			],
+			[
+				"pi",
+				"PI\t: const number Math"
+			],
+			[
+				"gete",
+				"getElementById\t( elementId: DOMString ): Element Document"
+			],
+			[
+				"getElem",
+				"getElementById\t( elementId: DOMString ): Element Document"
+			],
+			[
+				"a",
+				"a\tTag"
+			],
+			[
+				"SD",
+				"SDL"
+			],
+			[
+				"art",
+				"article_ids"
+			],
+			[
+				"me",
+				"methods"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 148.0,
+		"last_filter": "ssvue",
+		"selected_items":
+		[
+			[
+				"ssvue",
+				"Set Syntax: Vue Component"
+			],
+			[
+				"insall",
+				"Package Control: Install Package"
+			],
+			[
+				"sshtml",
+				"Set Syntax: HTML"
+			],
+			[
+				"ssj",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"ssp",
+				"Set Syntax: Python"
+			],
+			[
+				"ssht",
+				"Set Syntax: HTML (Tcl)"
+			],
+			[
+				"ssm",
+				"Set Syntax: Markdown"
+			],
+			[
+				"ssmat",
+				"Set Syntax: MATLAB"
+			],
+			[
+				"packagein",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Remove Channel"
+			],
+			[
+				"ssc",
+				"Set Syntax: C"
+			],
+			[
+				"sspy",
+				"Set Syntax: Python"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"git",
+				"GitGutter: Support Info"
+			],
+			[
+				"ss",
+				"Set Syntax: Markdown"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"pca",
+				"Package Control: Install Package"
+			],
+			[
+				"html",
+				"HTMLPrettify: Set Plugin Options"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"ssjs",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"ssmd",
+				"Set Syntax: Markdown"
+			],
+			[
+				"Package Control: pa",
+				"Package Control: Install Package"
+			],
+			[
+				"split",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"pic",
+				"Package Control: Install Package"
+			],
+			[
+				"waka",
+				"Package Control: Upgrade/Overwrite All Packages"
+			]
+		],
+		"width": 533.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"print('123')",
+			"clear",
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/rouzip/workspace/dataUI/src/components/loading.vue",
+		"/home/rouzip/workspace/vue-example-login/package.json",
+		"/home/rouzip/workspace/test/vue/online-store/server.js",
+		"/home/rouzip/workspace/dataUI/src/components/HelloWorld.vue",
+		"/home/rouzip/use_after_start",
+		"/home/rouzip/workspace/dataUI/src/components/head.vue",
+		"/home/rouzip/workspace/dataUI/build/vue-loader.conf.js",
+		"/home/rouzip/workspace/dataUI/build/webpack.dev.conf.js",
+		"/home/rouzip/workspace/dataUI/package.json",
+		"/home/rouzip/workspace/databaseTest/app/app.js",
+		"/home/rouzip/workspace/databaseTest/app/controllers/home.js",
+		"/home/rouzip/workspace/databaseTest/app/router/home.js",
+		"/home/rouzip/workspace/dateUI/src/main.js",
+		"/home/rouzip/workspace/dataUI/build/utils.js",
+		"/home/rouzip/workspace/dataUI/build/check-versions.js",
+		"/home/rouzip/workspace/dataUI/build/build.js",
+		"/home/rouzip/workspace/dataUI/build/webpack.base.conf.js",
+		"/home/rouzip/workspace/dataUI/build/webpack.prod.conf.js",
+		"/home/rouzip/workspace/dataUI/config/index.js",
+		"/home/rouzip/workspace/dataUI/config/dev.env.js",
+		"/home/rouzip/workspace/dataUI/src/router/index.js",
+		"/home/rouzip/workspace/dataUI/src/App.vue",
+		"/home/rouzip/workspace/dataUI/src/main.js",
+		"/home/rouzip/workspace/dateUI/src/components/HelloWorld.vue",
+		"/home/rouzip/workspace/dateUI/src/App.vue",
+		"/home/rouzip/workspace/dateUI/README.md",
+		"/home/rouzip/学习笔记/vue.md",
+		"/home/rouzip/workspace/databaseTest/app/views/index.html",
+		"/home/rouzip/workspace/databaseTest/package.json",
+		"/home/rouzip/workspace/test/bigbird/Dashboard Template for Bootstrap.html",
+		"/home/rouzip/workspace/Chain/app.js",
+		"/home/rouzip/workspace/databaseTest/app.js",
+		"/home/rouzip/workspace/databaseTest/index.js",
+		"/home/rouzip/workspace/Chain/.gitignore",
+		"/home/rouzip/workspace/Titanic/test.py",
+		"/home/rouzip/a.html",
+		"/home/rouzip/学习笔记/Nginx 搭配 node部署.md",
+		"/home/rouzip/workspace/htm/public/js/functions.js",
+		"/home/rouzip/workspace/htm/public/index.html",
+		"/home/rouzip/workspace/htm/app.js",
+		"/home/rouzip/workspace/test/htm/app.js",
+		"/home/rouzip/workspace/test/htm/index.html",
+		"/home/rouzip/Leetcode/Spiral Matrix II.cpp",
+		"/home/rouzip/.config/sublime-text-3/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
+		"/home/rouzip/Leetcode/Spiral_Matrix_II.js",
+		"/home/rouzip/Leetcode/Spiral Matrix II.js",
+		"/home/rouzip/Leetcode/Spiral Matrix II",
+		"/home/rouzip/shadowsocks.json",
+		"/home/rouzip/workspace/Stanford_Machine_Learning/python/ex3/ex3.py",
+		"/home/rouzip/workspace/Stanford_Machine_Learning/python/ex3/nn.py",
+		"/home/rouzip/workspace/Stanford_Machine_Learning/python/ex4/ex4.py",
+		"/home/rouzip/workspace/Stanford_Machine_Learning/machine-learning-ex7/ex7/pca.py",
+		"/home/rouzip/workspace/Stanford_Machine_Learning/machine-learning-ex7/ex7/pca.m",
+		"/home/rouzip/workspace/Stanford_Machine_Learning/machine-learning-ex7/ex7/featureNormalize.m",
+		"/home/rouzip/workspace/Stanford_Machine_Learning/machine-learning-ex7/ex7/ex7_pca.m",
+		"/home/rouzip/workspace/Stanford_Machine_Learning/machine-learning-ex5/ex5/ex5.py",
+		"/home/rouzip/workspace/Stanford_Machine_Learning/machine-learning-ex6/ex6/ex6.py",
+		"/home/rouzip/workspace/Stanford_Machine_Learning/machine-learning-ex7/ex7/kMeansInitCentroids.m",
+		"/home/rouzip/workspace/Stanford_Machine_Learning/machine-learning-ex7/ex7/ex7.m",
+		"/home/rouzip/workspace/Stanford_Machine_Learning/machine-learning-ex7/ex7/ex7.py",
+		"/home/rouzip/workspace/test/coursera-machine-learning-in-python/mlclass-ex7-004/mlclass-ex7/ex7.py",
+		"/home/rouzip/workspace/test/coursera-machine-learning-in-python/mlclass-ex7-004/mlclass-ex7/runkMeans.py",
+		"/home/rouzip/workspace/test/coursera-machine-learning-in-python/mlclass-ex7-004/mlclass-ex7/computeCentroids.py",
+		"/home/rouzip/workspace/test/coursera-machine-learning-in-python/mlclass-ex7-004/mlclass-ex7/plotDataPoints.py",
+		"/home/rouzip/workspace/test/coursera-machine-learning-in-python/mlclass-ex7-004/mlclass-ex7/plotProgresskMeans.py",
+		"/home/rouzip/workspace/Stanford_Machine_Learning/machine-learning-ex7/ex7/plotDataPoints.m",
+		"/home/rouzip/workspace/Stanford_Machine_Learning/machine-learning-ex7/ex7/plotProgresskMeans.m",
+		"/home/rouzip/workspace/Stanford_Machine_Learning/machine-learning-ex7/ex7/runkMeans.m",
+		"/home/rouzip/workspace/test/coursera-machine-learning-in-python/mlclass-ex7-004/mlclass-ex7/findClosestCentroids.py",
+		"/home/rouzip/workspace/Stanford_Machine_Learning/machine-learning-ex6/ex6/getVocabList.m",
+		"/home/rouzip/workspace/Stanford_Machine_Learning/machine-learning-ex6/ex6/processEmail.m",
+		"/home/rouzip/workspace/Stanford_Machine_Learning/machine-learning-ex6/ex6/emailSample1.txt",
+		"/home/rouzip/workspace/Stanford_Machine_Learning/machine-learning-ex6/ex6/ex6_spam.m",
+		"/home/rouzip/workspace/Stanford_Machine_Learning/machine-learning-ex6/ex6/ex6email.py",
+		"/home/rouzip/workspace/Stanford_Machine_Learning/machine-learning-ex6/ex6/readFile.m",
+		"/home/rouzip/workspace/Stanford_Machine_Learning/machine-learning-ex6/ex6/spamSample1.txt",
+		"/home/rouzip/workspace/Stanford_Machine_Learning/machine-learning-ex6/ex6/spamSample2.txt",
+		"/home/rouzip/workspace/Stanford_Machine_Learning/machine-learning-ex6/ex6/gaussianKernel.m",
+		"/home/rouzip/workspace/Stanford_Machine_Learning/machine-learning-ex6/ex6/ex6.m",
+		"/home/rouzip/workspace/test/coursera-machine-learning-in-python/mlclass-ex6-004/mlclass-ex6/ex6.py",
+		"/home/rouzip/workspace/test/svm.py",
+		"/home/rouzip/workspace/test/coursera-machine-learning-in-python/mlclass-ex6-004/mlclass-ex6/visualizeBoundaryLinear.py",
+		"/home/rouzip/workspace/test/coursera-machine-learning-in-python/mlclass-ex6-004/mlclass-ex6/visualizeBoundary.py",
+		"/home/rouzip/workspace/test/coursera-machine-learning-in-python/mlclass-ex6-004/mlclass-ex6/plotData.py",
+		"/home/rouzip/workspace/test/coursera-machine-learning-in-python/mlclass-ex6-004/mlclass-ex6/dataset3Params.py",
+		"/media/rouzip/ROUZIP/svm.py",
+		"/home/rouzip/workspace/Experimental-platform/multi_client.py",
+		"/home/rouzip/workspace/Experimental-platform/mnist_cnn.py",
+		"/home/rouzip/workspace/Experimental-platform/fl_server.py",
+		"/home/rouzip/workspace/Experimental-platform/fl_client.py",
+		"/home/rouzip/workspace/Experimental-platform/ea_client.py",
+		"/home/rouzip/workspace/Experimental-platform/datasource.py",
+		"/home/rouzip/stats",
+		"/home/rouzip/workspace/Experimental-platform/.gitignore",
+		"/home/rouzip/workspace/pdfReader/.gitignore",
+		"/home/rouzip/workspace/Experimental-platform/server.py",
+		"/home/rouzip/workspace/test/Experimental-platform/fl_server.py",
+		"/home/rouzip/workspace/test/Experimental-platform/fl_client.py",
+		"/home/rouzip/workspace/test/Experimental-platform/datasource.py",
+		"/home/rouzip/workspace/test/Experimental-platform/mnist_cnn.py",
+		"/home/rouzip/workspace/test/Experimental-platform/multi_client.py",
+		"/home/rouzip/workspace/test/Experimental-platform/ea_client.py",
+		"/home/rouzip/workspace/test/Experimental-platform/t.py",
+		"/home/rouzip/workspace/test/Experimental-platform/b.py",
+		"/home/rouzip/workspace/test/Experimental-platform/server.py",
+		"/home/rouzip/workspace/Stanford_Machine_Learning/machine-learning-ex5/ex5/ex5.m",
+		"/home/rouzip/workspace/Stanford_Machine_Learning/machine-learning-ex4/ex4/ex4.py",
+		"/home/rouzip/workspace/Stanford_Machine_Learning/machine-learning-ex3/ex3/nn.py",
+		"/home/rouzip/workspace/test/coursera-machine-learning-in-python/mlclass-ex4-004/mlclass-ex4/nnCostFunction.py",
+		"/home/rouzip/workspace/test/coursera-machine-learning-in-python/mlclass-ex4-004/mlclass-ex4/ex4.py",
+		"/home/rouzip/workspace/test/coursera-machine-learning-in-python/mlclass-ex4-004/mlclass-ex4/predict.py",
+		"/home/rouzip/workspace/test/coursera-machine-learning-in-python/mlclass-ex4-004/mlclass-ex4/randInitializeWeights.py",
+		"/home/rouzip/workspace/Stanford_Machine_Learning/machine-learning-ex4/ex4/debugInitializeWeights.m",
+		"/home/rouzip/workspace/Stanford_Machine_Learning/machine-learning-ex4/ex4/checkNNGradients.m",
+		"/home/rouzip/workspace/Stanford_Machine_Learning/machine-learning-ex4/ex4/computeNumericalGradient.m",
+		"/home/rouzip/workspace/Stanford_Machine_Learning/machine-learning-ex4/ex4/nnCostFunction.m",
+		"/home/rouzip/workspace/Stanford_Machine_Learning/machine-learning-ex4/ex4/ex4.m",
+		"/home/rouzip/workspace/Stanford_Machine_Learning/machine-learning-ex3/ex3/ex3.py",
+		"/home/rouzip/workspace/test/coursera-machine-learning-in-python/mlclass-ex4-004/mlclass-ex4/computeNumericalGradient.py",
+		"/home/rouzip/workspace/test/coursera-machine-learning-in-python/mlclass-ex4-004/mlclass-ex4/checkNNGradients.py",
+		"/home/rouzip/workspace/test/coursera-machine-learning-in-python/mlclass-ex4-004/mlclass-ex4/sigmoid.py",
+		"/home/rouzip/workspace/Stanford_Machine_Learning/machine-learning-ex4/ex4/sigmoidGradient.m",
+		"/home/rouzip/workspace/Stanford_Machine_Learning/machine-learning-ex4/ex4/sigmoid.m",
+		"/home/rouzip/workspace/test/coursera-machine-learning-in-python/mlclass-ex4-004/mlclass-ex4/sigmoidGradient.py",
+		"/home/rouzip/workspace/test/coursera-machine-learning-in-python/mlclass-ex4-004/mlclass-ex4/debugInitializeWeights.py",
+		"/home/rouzip/workspace/Stanford_Machine_Learning/machine-learning-ex2/ex2/ex2.py",
+		"/home/rouzip/workspace/Stanford_Machine_Learning/machine-learning-ex3/ex3/predictOneVsAll.m",
+		"/home/rouzip/workspace/Stanford_Machine_Learning/machine-learning-ex3/ex3/oneVsAll.m"
+	],
+	"find":
+	{
+		"height": 32.0
+	},
+	"find_in_files":
+	{
+		"height": 145.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": true,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 32.0
+	},
+	"input":
+	{
+		"height": 51.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 178.0
+	},
+	"pinned_build_system": "",
+	"project": "build.sublime-project",
+	"replace":
+	{
+		"height": 60.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 101.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
