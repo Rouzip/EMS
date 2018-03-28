@@ -6,12 +6,12 @@ export default (sequelize) => {
       type: Sequelize.UUID,
       primaryKey: true,
     },
-    reason: Sequelize.STRING,
     time: Sequelize.INTEGER,  // 时长
     year: Sequelize.INTEGER,
     month: Sequelize.INTEGER,
     day: Sequelize.INTEGER,
     salary: Sequelize.INTEGER,
+    reason: Sequelize.STRING,
   }, {
     charset: 'utf8',
     collate: 'utf8_general_ci',

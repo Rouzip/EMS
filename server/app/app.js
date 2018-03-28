@@ -17,6 +17,7 @@ const app = new Koa()
 app.use(async(ctx, next) => {
   ctx.set('Access-Control-Allow-Credentials', 'true')
   ctx.set('Access-Control-Allow-Origin', 'http://localhost:8080')
+  ctx.set('Access-Control-Allow-Origin', 'http://0.0.0.0:8080')
   await next()
 })
 

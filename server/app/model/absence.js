@@ -10,6 +10,7 @@ export default (sequelize) => {
     year: Sequelize.INTEGER,
     month: Sequelize.INTEGER,
     day: Sequelize.INTEGER,
+    reason: Sequelize.STRING,
   }, {
     charset: 'utf8',
     collate: 'utf8_general_ci',

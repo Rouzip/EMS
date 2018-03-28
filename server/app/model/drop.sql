@@ -44,15 +44,15 @@ insert into employees values('2057f640-2e74-18j8-8bdf-9f0e3d95a8ea', '罗拉', '
 insert into employees values('2057f770-2e74-1hp8-8bdf-9f0e3d95a8ea', '仓井', '女', '5', 1, 3);
 
     
-insert into extraWorks values('1f1230d0-2e74-11e8-8bdf-9f0e3d95a8ea', 'bug', 4, 2018, 2, 22, 400, '1057f740-2k74-11e8-8bdf-9f0e3d95a8ea');
-insert into extraWorks values('1f3230d0-2e74-11e8-8bdf-9f0e3d95a8ea', 'bug', 2, 2018, 3, 23, 300, '2037f740-2e74-11e8-8bhf-9f0e3d95a8ea');
-insert into extraWorks values('1f8230d0-2e74-11e8-8bdf-9f0e3d95a8ea', 'bug', 1, 2018, 4, 24, 400, '2057f770-2e74-1hp8-8bdf-9f0e3d95a8ea');
+insert into extraWorks values('1f1230d0-2e74-11e8-8bdf-9f0e3d95a8ea', 4, 2018, 2, 22, 400, 'bug', '1057f740-2k74-11e8-8bdf-9f0e3d95a8ea');
+insert into extraWorks values('1f3230d0-2e74-11e8-8bdf-9f0e3d95a8ea', 2, 2018, 3, 23, 300, 'bug', '2037f740-2e74-11e8-8bhf-9f0e3d95a8ea');
+insert into extraWorks values('1f8230d0-2e74-11e8-8bdf-9f0e3d95a8ea', 1, 2018, 4, 24, 400, 'bug', '2057f770-2e74-1hp8-8bdf-9f0e3d95a8ea');
 
 
-insert into absences values(1, 2018, 3, 23, '2054f740-2e74-11h8-8bdf-9f0e3d95a8ea');
-insert into absences values(2, 2018, 3, 22, '2054f740-2e74-11h8-8bdf-9f0e3d95a8ea');
-insert into absences values(3, 2018, 1, 23, '2057f740-2e74-11e8-8bdf-9f0e3d95a8ea');
-insert into absences values(4, 2018, 2, 22, '2257f740-1e74-11e5-8bdf-9f0e3d95a8ea');
-insert into absences values(5, 2018, 6, 23, '2057f770-2e74-1hp8-8bdf-9f0e3d95a8ea');
-insert into absences values(6, 2018, 7, 12, '20575740-2e74-51e8-8bdf-9f0e3d95a8ea');
+insert into absences values(1, 2018, 3, 23, '睡懒觉，没起来', '2054f740-2e74-11h8-8bdf-9f0e3d95a8ea');
+insert into absences values(2, 2018, 3, 22, '结婚去了，为了爱情～', '2054f740-2e74-11h8-8bdf-9f0e3d95a8ea');
+insert into absences values(3, 2018, 1, 23, '打游戏打游戏打游戏打游戏打游戏打游戏', '2057f740-2e74-11e8-8bdf-9f0e3d95a8ea');
+insert into absences values(4, 2018, 2, 22, '看电影看电影看电影看电影看电影看电影看电影', '2257f740-1e74-11e5-8bdf-9f0e3d95a8ea');
+insert into absences values(5, 2018, 6, 23, '看电影看电影看电影看电影看电影看电影看电影看电影看电影', '2057f770-2e74-1hp8-8bdf-9f0e3d95a8ea');
+insert into absences values(6, 2018, 7, 12, '看电影看电影看电影看电影看电影看电影看电影看电影看电影看电影看电影看电影看电影', '20575740-2e74-51e8-8bdf-9f0e3d95a8ea');
 

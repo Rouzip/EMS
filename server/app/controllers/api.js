@@ -66,7 +66,7 @@ export async function getDepartmentEmployees(ctx) {
       employees,
       department
     }
-    ctx.response.body = employees
+    ctx.response.body = response
   } catch (err) {
     console.log(err)
     ctx.response.body = {}
