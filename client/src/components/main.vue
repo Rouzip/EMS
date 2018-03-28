@@ -1,6 +1,6 @@
 <template>
   <el-container>
-    <el-aside width="200px" height="100%"> 
+    <el-aside width="200px" height="100%">
       <el-menu>
         <el-menu-item index="1" @click="addShowDepartment">
           <i class="el-icon-location"></i>
@@ -23,7 +23,7 @@
             <i class="el-icon-setting"></i>
             <span>员工</span>
           </template>
-          <el-menu-item v-for="(department, i) in $store.state.departments" :key="i" :index="department.name">
+          <el-menu-item v-for="(department, i) in $store.state.departments" :key="i" :index="department.name" @click="departmentEmp(department.id)">
             <span>{{ department.name }}</span>
           </el-menu-item>
         </el-submenu>
@@ -44,8 +44,9 @@ export default {
       msg: 'Welcome to Your Vue.js App',
       positions: [],
       departments: [],
+      extraWorks: [],
+      absences: [],
       employees: [],
-      ttt: ['1', '2', '3']
     }
   },
   computed: {},
@@ -70,26 +71,49 @@ export default {
           this.$store.state.positions = []
         })
     },
+    getExtraWorks: async function() {
+      this.$http.get('/api/allextraworks')
+        .then(res => {
+          this.$store.state.extraWorks = res.data["extraWorks"]
+        })
+        .catch(err => {
+          console.log(err)
+          this.$store.state.extraWorks = []
+        })
+    },
+    getAbsences: async function() {
+      this.$http.get('/api/absences')
+        .then(res => {
+          this.$store.state.absences = res.data["absences"]
+        })
+        .catch(err => {
+          console.log(err)
+          this.$store.state.absences = []
+        })
+    },
     addShowDepartment: function() {
-      console.log('尝试添加组件')
       this.$router.push('/main/showDepartment')
     },
     addShowPosition: function() {
-      console.log('添加position')
       this.$router.push('/main/showPosition')
     },
     addShowAbsence: function() {
       console.log('添加缺勤组件')
+      this.$router.push('/main/showAbsence')
     },
     addShowExtraWork: function() {
-      console.log('添加加班组件')
       this.$router.push('/main/showExtraWork')
+    },
+    departmentEmp: function(id) {
+      console.log(id)
     }
   },
   created: async function() {
     try {
       await this.getDepartments()
       await this.getPositions()
+      await this.getExtraWorks()
+      await this.getAbsences()
     } catch (err) {
       console.log(err)
     }
