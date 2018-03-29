@@ -6,6 +6,7 @@ import departmentTable from '@/components/departmentTable'
 import positionTable from '@/components/positionTable'
 import absenceTable from '@/components/absenceTable'
 import extraWorkTable from '@/components/extraWorkTable'
+import employeeTable from '@/components/employeeTable'
 
 
 Vue.use(Router)
@@ -34,6 +35,10 @@ export default new Router({
         {
           path: 'showAbsence',
           component: absenceTable
+        },
+        {
+          path: 'showEmployee',
+          component: employeeTable
         }
       ]
     },

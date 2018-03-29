@@ -110,8 +110,6 @@ export default {
         })
     },
     handleDelete(index) {
-      console.log(index)
-      console.log(this.departments[index].id)
       // 表格中删除对应行的departments
       // vuex中删除数据
       // 向服务器发送请求
@@ -171,6 +169,8 @@ export default {
           .catch(err => {
             console.log(err)
           })
+        this.newName = ''
+        this.newSalary = ''
         this.$set(this.editAble, index, !this.editAble[index])
       }
     },

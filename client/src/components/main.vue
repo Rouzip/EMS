@@ -18,7 +18,7 @@
           <i class="el-icon-star-off"></i>
           <span slot="title">加班记录</span>
         </el-menu-item>
-        <el-submenu index="5">
+        <el-submenu index="5" @open="addShowEmployee">
           <template slot="title">
             <i class="el-icon-setting"></i>
             <span>员工</span>
@@ -49,16 +49,8 @@ import qs from 'qs'
 export default {
   name: 'app',
   data() {
-    return {
-      msg: 'Welcome to Your Vue.js App',
-      positions: [],
-      departments: [],
-      extraWorks: [],
-      absences: [],
-      employees: [],
-    }
+    return {}
   },
-  computed: {},
   methods: {
     getDepartments: async function() {
       this.$http.get('/api/department')
@@ -107,11 +99,13 @@ export default {
       this.$router.push('/main/showPosition')
     },
     addShowAbsence: function() {
-      console.log('添加缺勤组件')
       this.$router.push('/main/showAbsence')
     },
     addShowExtraWork: function() {
       this.$router.push('/main/showExtraWork')
+    },
+    addShowEmployee: function() {
+      this.$router.push('/main/showEmployee')
     },
     departmentEmp: function(id) {
       this.$http.post('/api/department/employees', qs.stringify({
@@ -119,7 +113,8 @@ export default {
       }))
         .then(res=> {
           this.$store.state.employees = res.data.employees
-          console.log(res.data.employees)
+          this.$store.state.depOrPos = 'department'
+          this.addShowEmployee()
         })
         .catch(err=> {
           console.log(err)
@@ -131,7 +126,8 @@ export default {
       }))
         .then(res=> {
           this.$store.state.employees = res.data.employees
-          console.log(res.data.employees)
+          this.$store.state.depOrPos = 'position'
+          this.addShowEmployee()
         })
         .catch(err=> {  
           console.log(err)

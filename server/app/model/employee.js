@@ -8,7 +8,7 @@ export default (sequelize) => {
     },
     name: Sequelize.STRING,
     sex: Sequelize.STRING,
-    age: Sequelize.INTEGER
+    birth: Sequelize.DATE
   }, {
     charset: 'utf8',
     collate: 'utf8_general_ci',

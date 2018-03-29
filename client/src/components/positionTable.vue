@@ -171,6 +171,8 @@ export default {
           .catch(err => {
             console.log(err)
           })
+        this.newName = ''
+        this.newSalary = ''
         this.$set(this.editAble, index, !this.editAble[index])
       }
     },
