@@ -23,9 +23,18 @@
             <i class="el-icon-setting"></i>
             <span>员工</span>
           </template>
-          <el-menu-item v-for="(department, i) in $store.state.departments" :key="i" :index="department.name" @click="departmentEmp(department.id)">
-            <span>{{ department.name }}</span>
-          </el-menu-item>
+          <el-menu-item-group>
+            <template slot="title">部门</template>
+            <el-menu-item v-for="(department, i) in $store.state.departments" :key="i" :index="department.name" @click="departmentEmp(department.id)">
+              <span>{{ department.name }}</span>
+            </el-menu-item>
+          </el-menu-item-group>
+          <el-menu-item-group> 
+            <template slot="title">工种</template>
+            <el-menu-item v-for="(position, i) in $store.state.positions" :key="i" :index="position.name" @click="positionEmp(position.id)">
+              <span>{{ position.name }}</span>
+            </el-menu-item>
+          </el-menu-item-group>
         </el-submenu>
       </el-menu>
     </el-aside>
@@ -105,6 +114,16 @@ export default {
       this.$router.push('/main/showExtraWork')
     },
     departmentEmp: function(id) {
+      this.$http.post('/api/department/employees', qs.stringify({
+        "departmentId": id
+      }))
+        .then(res=> {
+          this.$store.state.employees = res.data.employees
+          console.log(res.data.employees)
+        })
+        .catch(err=> {
+          console.log(err)
+        })
       console.log(id)
     }
   },
