@@ -124,7 +124,18 @@ export default {
         .catch(err=> {
           console.log(err)
         })
-      console.log(id)
+    },
+    positionEmp: function(id) {
+      this.$http.post('/api/position/employees', qs.stringify({
+        "positionId": id
+      }))
+        .then(res=> {
+          this.$store.state.employees = res.data.employees
+          console.log(res.data.employees)
+        })
+        .catch(err=> {  
+          console.log(err)
+        })
     }
   },
   created: async function() {
