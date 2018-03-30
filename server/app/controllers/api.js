@@ -242,7 +242,6 @@ async function getMonthSalary(uuid, year, month) {
     })
     // 工资最后加入基本工资和部门津贴
     Salary = Salary + position.salary + department.salary
-
     let response = {
       "salary": Salary,
       "extraWorks": extraWorks,
