@@ -383,17 +383,29 @@ export default {
         this.$set(this.editAble, index, !this.editAble[index])
       }
     },
-    chart: function() {
-      console.log(1234)
+    chart: function(row, event, column) {
+      let i = 0
+      this.$store.state.employees.forEach((employee, index)=>{
+        if (employee.id === row.id){
+          i = index
+        }
+      })
+      
+      if (this.option.legend.data.length === 1){
+        this.option.legend.data.push(row.name)
+      } else {
+        this.option.legend.data[1] = row.name
+      }
+      let myChart = echarts.init(document.getElementById('salary-chart'), 'light')
+      let series = []
+      let op = this.$store.state.meanSalary
+      op["data"] = this.meanData
+      series.push(op)
+      series.push(this.seriesData[i])
+      let option = this.option
+      option["series"] = series
+      myChart.setOption(option)
     },
-    meanSalarys: function() {
-
-      for (let i = 0; i<12; i++){
-        this.$set(this.$store.state.meanData, i, 
-          this.$store.state.meanData/this.$store.state.employees.length)
-      }  
-      return this.$store.state.meanData
-    }
   },
   mounted() {
     let myChart = echarts.init(document.getElementById('salary-chart'), 'light')
