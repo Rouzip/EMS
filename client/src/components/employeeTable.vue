@@ -112,8 +112,8 @@
         </template>
       </el-table-column>
     </el-table>
-    <div id="salary-chart" class="chart">
-    </div>
+    <span id="salary-chart" class="chart">
+    </span>
   </div>
 </template>
 <script>
@@ -144,10 +144,44 @@ export default {
       editBirth: '',
       editSex: '',
       editPosition: '',
-      editDepartment: ''
+      editDepartment: '',
+      meanData: [0,0,0,0,0,0,0,0,0,0,0,0],
+      option: {
+            title: {
+              text: '工资统计图'
+            },
+            tooltip: {
+              trigger: 'axis',
+            },
+            legend: {
+              data: ['平均工资']
+            },
+            grid: {
+              left: '3%',
+              right: '4%',
+              bottom: '3%',
+              containLabel: true
+            },
+            toolbox: {
+              feature: {
+                saveAsImage: {}
+              }
+            },
+            xAxis: {
+              type: 'category',
+              boundaryGap: false,
+              data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+            },
+            yAxis: {
+              type: 'value'
+            },
+          }
     }
   },
   computed: {
+    seriesData() {
+      return this.$store.state.series.slice(0, this.$store.state.employees.length)
+    },
     departments: function() {
       return this.$store.state.departments
     },
@@ -179,53 +213,24 @@ export default {
       })
       return a
     },
-    series: function() {
-      let a = []
-      this.$store.state.employees.forEach(employee => {
-        let salary = {}
-
-      })
-
-      let myChart = echarts.init(document.getElementById('salary-chart'))
-      let option = {
-        title: {
-          text: 'ECharts 入门示例'
-        },
-        tooltip: {},
-        legend: {
-          data: ['销量']
-        },
-        xAxis: {
-          data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
-        },
-        yAxis: {},
-        series: [{
-          name: '销量',
-          type: 'bar',
-          data: [5, 20, 36, 10, 10, 20]
-        }]
-      }
-      myChart.setOption(option)
-      console.log(123)
-    }
   },
   methods: {
     addEmployee: function() {
-      let month = this.addBirth.getMonth() + 1
-      if (month < 10) {
-        month = '0' + month
-      } else {
-        month = month.toString()
-      }
-      let date = this.addBirth.getDate()
-      if (date < 10) {
-        date = '0' + date
-      } else {
-        date = date.toString()
-      }
-      let birth = this.addBirth.getFullYear() + '-' + month + '-' + date
       if (this.addName !== '' && this.addAge !== '' && this.addSex !== '' &&
         this.addDepartment !== '' && this.addPosition !== '') {
+        let month = this.addBirth.getMonth() + 1
+        if (month < 10) {
+          month = '0' + month
+        } else {
+          month = month.toString()
+        }
+        let date = this.addBirth.getDate()
+        if (date < 10) {
+          date = '0' + date
+        } else {
+          date = date.toString()
+        }
+        let birth = this.addBirth.getFullYear() + '-' + month + '-' + date
         this.$http.post('/api/create', qs.stringify({
             "model": "Employee",
             "data": {
@@ -312,7 +317,7 @@ export default {
         // 开启编辑模式
         this.$set(this.editAble, index, !this.editAble[index])
       } else {
-        if (this.newName === "" || this.newSalary === "") {
+        if (this.editName === "" || this.editSalary === "") {
           this.$alert('不能为空', '警告', {
             type: 'error'
           })
@@ -378,12 +383,44 @@ export default {
         this.$set(this.editAble, index, !this.editAble[index])
       }
     },
-    chart: function(){
+    chart: function() {
       console.log(1234)
     },
+    meanSalarys: function() {
+
+      for (let i = 0; i<12; i++){
+        this.$set(this.$store.state.meanData, i, 
+          this.$store.state.meanData/this.$store.state.employees.length)
+      }  
+      return this.$store.state.meanData
+    }
   },
   mounted() {
-    console.log(123)
+    let myChart = echarts.init(document.getElementById('salary-chart'), 'light')
+    let series = []
+    let op = this.$store.state.meanSalary
+    op["data"] = this.meanData
+    series.push(op)
+    let option = this.option
+    option["series"] = series
+    myChart.setOption(option)
+  },
+  watch: {
+    seriesData: function() {
+      this.meanData = [0,0,0,0,0,0,0,0,0,0,0,0]
+      this.seriesData.forEach(d=> {
+        d.data.forEach((money,index)=> this.meanData[index]+=money)
+      })
+      this.meanData.forEach((a,b)=> this.meanData[b]/=this.$store.state.employees.length)
+      let myChart = echarts.init(document.getElementById('salary-chart'), 'light')
+      let series = []
+      let op = this.$store.state.meanSalary
+      op["data"] = this.meanData
+      series.push(op)
+      let option = this.option
+      option["series"] = series
+      myChart.setOption(option)
+    }
   }
 }
 
@@ -417,8 +454,8 @@ export default {
 }
 
 .chart {
-  width: 100%;
-  height: 100%;
+  width: 1000px;
+  height: 500px;
 }
 
 </style>

@@ -28,13 +28,38 @@ const store = new Vuex.Store({
     extraWorks: [],
     absences: [],
     employees: [],
-    depOrPos:'',
-    salarys: {}
+    depOrPos: '',
+    salarys: {},
+    series: [],
+    meanSalary: {
+      "name": "平均工资",
+      "type": 'line',
+    },
+    meanData: [0,0,0,0,0,0,0,0,0,0,0,0]
   },
   mutations: {
     updateUserInfo(state, newUserInfo) {
       state.isLogin = true
       state.uid = newUserInfo.uid
+    },
+    updateSeries(state, payload) {
+      let salary = {}
+      salary["name"] = payload.name
+      salary["type"] = 'line'
+      salary["data"] = []
+      let tmp = state.salarys[payload.id]
+      for (let i = 1; i <= 12; i++) {
+        salary["data"].push(tmp[i].salary)
+        // console.log(state.meanData[i-1], tmp[i].salary)
+        // state.meanSalary.data[i - 1] += tmp[i].salary
+        // console.log(state.meanData, '前面')
+        // let sum = state.meanData[i - 1] + tmp[i].salary
+        // Vue.set(state.meanData, i - 1, sum)
+        // console.log(state.meanData[i-1], tmp[i].salary)
+      }
+      // console.log(this.state.meanData)
+      // this.state.meanData = state.meanSalary
+      Vue.set(state.series, payload.index, salary)
     }
   }
 })
@@ -53,10 +78,9 @@ new Vue({
   },
   mtehods: {
     checkLogin() {
-      if (!this.$state.isLogin){
+      if (!this.$state.isLogin) {
         this.$router.push('/login')
-      }
-      else{
+      } else {
         this.$router.push('/main')
       }
     }
