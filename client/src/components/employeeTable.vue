@@ -29,7 +29,7 @@
       </el-col>
       <el-button type="primary" round class="b-margin" @click="addEmployee">添加</el-button>
     </div>
-    <el-table height="200" border style="width: 100%" :data="employees">
+    <el-table height="200" border style="width: 100%" :data="employees" @row-click="chart">
       <el-table-column label="员工姓名" width="100" fixed>
         <template slot-scope="scope">
           <template v-if="editAble[scope.$index]">
@@ -112,10 +112,13 @@
         </template>
       </el-table-column>
     </el-table>
+    <div id="salary-chart" class="chart">
+    </div>
   </div>
 </template>
 <script>
 import qs from 'qs'
+import echarts from 'echarts'
 
 function guid() {
   function s4() {
@@ -175,6 +178,35 @@ export default {
         })
       })
       return a
+    },
+    series: function() {
+      let a = []
+      this.$store.state.employees.forEach(employee => {
+        let salary = {}
+
+      })
+
+      let myChart = echarts.init(document.getElementById('salary-chart'))
+      let option = {
+        title: {
+          text: 'ECharts 入门示例'
+        },
+        tooltip: {},
+        legend: {
+          data: ['销量']
+        },
+        xAxis: {
+          data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
+        },
+        yAxis: {},
+        series: [{
+          name: '销量',
+          type: 'bar',
+          data: [5, 20, 36, 10, 10, 20]
+        }]
+      }
+      myChart.setOption(option)
+      console.log(123)
     }
   },
   methods: {
@@ -206,7 +238,7 @@ export default {
             }
           }))
           .then(res => {
-            if (this.store.state.employees.length === 0){
+            if (this.store.state.employees.length === 0) {
               return
             }
             if (this.$store.state.depOrPos === "position") {
@@ -346,6 +378,12 @@ export default {
         this.$set(this.editAble, index, !this.editAble[index])
       }
     },
+    chart: function(){
+      console.log(1234)
+    },
+  },
+  mounted() {
+    console.log(123)
   }
 }
 
@@ -376,6 +414,11 @@ export default {
 
 .bg-purple-light {
   background: #e5e2f2;
+}
+
+.chart {
+  width: 100%;
+  height: 100%;
 }
 
 </style>

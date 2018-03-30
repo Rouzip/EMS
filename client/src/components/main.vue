@@ -1,6 +1,6 @@
 <template>
   <el-container>
-    <el-aside width="200px" height="100%">
+    <el-aside width="200px" height="100%" style="overflow-x: hidden; height: -webkit-fill-available">
       <el-menu>
         <el-menu-item index="1" @click="addShowDepartment">
           <i class="el-icon-location"></i>
@@ -115,6 +115,18 @@ export default {
           this.$store.state.employees = res.data.employees
           this.$store.state.depOrPos = 'department'
           this.addShowEmployee()
+          this.$store.state.employees.forEach(employee=>{
+            this.$http.post('/api/salary/year', qs.stringify({
+              "year": 2018,
+              "employeeId": employee.id
+            }))
+              .then(res=> {
+                this.$store.state.salarys[employee.id] = res.data
+              })
+              .catch(err=> {
+                console.log(err)
+              })
+          })
         })
         .catch(err=> {
           console.log(err)
@@ -128,6 +140,18 @@ export default {
           this.$store.state.employees = res.data.employees
           this.$store.state.depOrPos = 'position'
           this.addShowEmployee()
+          this.$store.state.employees.forEach(employee=>{
+            this.$http.post('/api/salary/year', qs.stringify({
+              "year": 2018,
+              "employeeId": employee.id
+            }))
+              .then(res=> {
+                this.$store.state.salarys[employee.id] = res.data
+              })
+              .catch(err=> {
+                console.log(err)
+              })
+          })
         })
         .catch(err=> {  
           console.log(err)
@@ -140,6 +164,10 @@ export default {
       await this.getPositions()
       await this.getExtraWorks()
       await this.getAbsences()
+      let html = document.getElementsByTagName('html')[0]
+      html.style.property = {
+        "overflow": "hidden"
+      }
     } catch (err) {
       console.log(err)
     }

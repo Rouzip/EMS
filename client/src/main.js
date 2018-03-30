@@ -29,6 +29,7 @@ const store = new Vuex.Store({
     absences: [],
     employees: [],
     depOrPos:'',
+    salarys: {}
   },
   mutations: {
     updateUserInfo(state, newUserInfo) {
