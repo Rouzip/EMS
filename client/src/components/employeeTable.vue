@@ -27,7 +27,7 @@
           </el-option>
         </el-select>
       </el-col>
-      <el-button type="primary" round class="b-margin" @click="addEmployee">添加</el-button>
+      <el-button type="primary" round class="b-margin" @click="addNewEmployee">添加</el-button>
     </div>
     <el-table height="200" border style="width: 100%" :data="employees" @row-click="chart">
       <el-table-column label="员工姓名" width="100" fixed>
@@ -215,7 +215,7 @@ export default {
     },
   },
   methods: {
-    addEmployee: function() {
+    addNewEmployee: async function() {
       if (this.addName !== '' && this.addAge !== '' && this.addSex !== '' &&
         this.addDepartment !== '' && this.addPosition !== '') {
         let month = this.addBirth.getMonth() + 1
@@ -231,7 +231,8 @@ export default {
           date = date.toString()
         }
         let birth = this.addBirth.getFullYear() + '-' + month + '-' + date
-        this.$http.post('/api/create', qs.stringify({
+        try {
+          let res = await this.$http.post('/api/create', qs.stringify({
             "model": "Employee",
             "data": {
               "name": this.addName,
@@ -242,31 +243,14 @@ export default {
               "id": guid()
             }
           }))
-          .then(res => {
-            if (this.store.state.employees.length === 0) {
-              return
-            }
-            if (this.$store.state.depOrPos === "position") {
-              this.$http.post('/api/position/employees', qs.stringify({
-                  "positionId": this.$store.state.employee[0].positionId
-                }))
-                .then(res => {
-                  this.$store.state.employees = res.data.employees
-                })
-                .catch(err => {
-                  console.log(err)
-                })
-            } else if (this.$store.state.depOrPos === "department") {
-              this.$http.post('/api/department/employees', qs.stringify({
-                  "departmentId": this.$store.state.employee[0].departmentId
-                }))
-                .then(res => {
-                  this.$store.state.employees = res.data.employees
-                })
-                .catch(err => {
-                  console.log(err)
-                })
-            }
+          if (this.$store.state.employees.length === 0) {
+            return
+          }
+          if (this.$store.state.depOrPos === "position"){
+            let response = await this.$http.post('/api/position/employees', qs.stringify({
+                "positionId": this.$store.state.employees[0].positionId
+              }))
+            this.$store.state.employees = response.data.employees
             this.$message({
               showClose: true,
               message: '员工添加成功',
@@ -277,10 +261,25 @@ export default {
             this.addSex = ''
             this.addDepartment = ''
             this.addPosition = ''
-          })
-          .catch(err => {
-            console.log(err)
-          })
+          } else if (this.$store.state.depOrPos === "department") {
+            let response = await this.$http.post('/api/department/employees', qs.stringify({
+                  "departmentId": this.$store.state.employees[0].departmentId
+                }))
+            this.$store.state.employees = response.data.employees
+            this.$message({
+              showClose: true,
+              message: '员工添加成功',
+              type: 'success'
+            })
+            this.addBirth = ''
+            this.addName = ''
+            this.addSex = ''
+            this.addDepartment = ''
+            this.addPosition = ''
+          }
+        } catch(err) {
+          console.log(err)
+        }
       } else {
         this.$alert('不能为空', '警告', {
           type: 'error'
