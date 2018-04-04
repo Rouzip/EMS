@@ -164,7 +164,7 @@ export default {
             },
             toolbox: {
               feature: {
-                saveAsImage: {}
+                saveAsImage: {},
               }
             },
             xAxis: {
@@ -389,12 +389,12 @@ export default {
           i = index
         }
       })
-      
       if (this.option.legend.data.length === 1){
         this.option.legend.data.push(row.name)
       } else {
         this.option.legend.data[1] = row.name
       }
+      console.log(this.option.legend.data)
       let myChart = echarts.init(document.getElementById('salary-chart'), 'light')
       let series = []
       let op = this.$store.state.meanSalary

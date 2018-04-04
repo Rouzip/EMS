@@ -145,13 +145,17 @@ export default {
           this.$store.state.employees = res.data.employees
           this.$store.state.depOrPos = 'position'
           this.addShowEmployee()
-          this.$store.state.employees.forEach(employee=>{
+          this.$store.state.employees.forEach((employee, index)=>{
             this.$http.post('/api/salary/year', qs.stringify({
               "year": 2018,
               "employeeId": employee.id
             }))
               .then(res=> {
-                this.$store.state.salarys[employee.id] = res.data
+                let response = res.data
+                // 更新salarys
+                this.$set(this.$store.state.salarys, employee.id, response)
+                // 计算series数据提供给echarts
+                this.$store.commit('updateSeries', {"name": employee.name, "id": employee.id, "index": index})
               })
               .catch(err=> {
                 console.log(err)

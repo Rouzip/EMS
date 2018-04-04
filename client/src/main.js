@@ -50,15 +50,7 @@ const store = new Vuex.Store({
       let tmp = state.salarys[payload.id]
       for (let i = 1; i <= 12; i++) {
         salary["data"].push(tmp[i].salary)
-        // console.log(state.meanData[i-1], tmp[i].salary)
-        // state.meanSalary.data[i - 1] += tmp[i].salary
-        // console.log(state.meanData, '前面')
-        // let sum = state.meanData[i - 1] + tmp[i].salary
-        // Vue.set(state.meanData, i - 1, sum)
-        // console.log(state.meanData[i-1], tmp[i].salary)
       }
-      // console.log(this.state.meanData)
-      // this.state.meanData = state.meanSalary
       Vue.set(state.series, payload.index, salary)
     }
   }
