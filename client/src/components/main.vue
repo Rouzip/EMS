@@ -180,6 +180,9 @@ export default {
     } catch (err) {
       console.log(err)
     }
+  },
+  destroyed: function() {
+    document.cookie = ''
   }
 }
 
